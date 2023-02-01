@@ -46,7 +46,7 @@ print(deposit_methods.json())
 resp = kraken_request('/0/private/DepositAddresses', {
     "nonce": str(int(1000*time.time())),
     "asset": "XBT",
-    "method": "Bitcoin Lightning", # even tho it's listed as a method it seems not supported via api atm
+    "method": "Bitcoin Lightning", # even tho it's listed as a method it seems not supported via api atm {'error': ['EService:Busy']}
     "new": True
 }, api_key, api_sec)
 
